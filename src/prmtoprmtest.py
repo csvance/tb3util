@@ -1,7 +1,6 @@
 import sys
 
-from prmimporter import PRMImporter
-from prmexporter import PRMExporter
+from TB3Util import *
 
 source_path = sys.argv[1]
 dest_path = sys.argv[2]

@@ -53,7 +53,6 @@ class MIDIParser:
 				if(event.get_velocity() <= 64):
 					accent = False
 				elif(event.get_velocity() <= 127):
-					print "wat"
 					accent = True
 				
 				step = {}

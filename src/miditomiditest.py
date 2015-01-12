@@ -1,7 +1,6 @@
 import sys
 
-from midiimporter import MIDIImporter
-from midiexporter import MIDIExporter
+from TB3Util import *
 
 source_path = sys.argv[1]
 dest_path = sys.argv[2]
