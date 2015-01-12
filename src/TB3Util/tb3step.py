@@ -8,17 +8,16 @@ class TB3Step:
 	KEY_CLEAR = "CLEAR"
 	KEY_SLIDE = "SLIDE"
 
-	#New step constructor, fill step with default parameters
 	def __init__(self,step_dict=None):
 		if(step_dict == None):
-			self._init(midi.C_3,False,True,False)
+			self._init()
 		else:
 			self._init(step_dict[TB3Step.KEY_NOTE],step_dict[TB3Step.KEY_ACCENT],step_dict[TB3Step.KEY_CLEAR],step_dict[TB3Step.KEY_SLIDE])
 			
 	def __repr__(self):
 		return "TB3Step(note=%s,accent=%s,clear=%s,slide=%s)" % (self.note,self.accent,self.clear,self.slide)
 
-	def _init(self,note,accent,clear,slide):
+	def _init(self,note=midi.C_3,accent=False,clear=True,slide=False):
 		self.note = note
 		self.accent = accent
 		self.clear = clear

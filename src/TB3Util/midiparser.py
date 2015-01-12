@@ -8,6 +8,7 @@ class MIDIParser:
 		self.midi_path = midi_path
 		
 	def parse(self,track_index=0):
+        
 		pattern = midi.read_midifile(self.midi_path)
 		
 		track = pattern[track_index] 
@@ -15,20 +16,25 @@ class MIDIParser:
 		#Pulses per quarter
 		ppq = pattern.resolution
 		
+        #4 TB-3 notes in a quarter
 		tb3_step_distance = ppq / 4
 
 		#Count how many notes are current playing, used to calculate sliding
 		noteon = 0
 		
+        #Flags
 		slide = False
 		accent = False
 
+        #MIDI Tick time during which the last note event happened
 		last_note_on = 0
+        
+        #Midi event tick counter
 		current_time = 0
 		
-		step_count = 0
-		
+        #Build a list of TB3Step objects
 		steps = []
+        step_count = 0
 		
 		for event in track:
 		
