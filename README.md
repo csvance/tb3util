@@ -17,10 +17,5 @@ Dependencies:
 
 Example Usage:
 
-1. Backup patches from TB-3 to MIDI files
-
-python tb3cli.py prm G:/backup midi C:/Users/MyUsername/Desktop/midifolder
-
-2. Restore patches from your MIDI folder to the TB-3:
-
-python tb3cli.py midi C:/Users/MyUsername/Desktop/midifolder prm G:/backup
+A. Backup patches from TB-3 to MIDI files: python tb3cli.py prm G:/backup midi C:/Users/MyUsername/Desktop/midifolder
+B. Restore patches from your MIDI folder to the TB-3: python tb3cli.py midi C:/Users/MyUsername/Desktop/midifolder prm G:/backup
