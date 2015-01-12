@@ -1,6 +1,8 @@
 # tb3util
 Backup and convert your Roland TB-3 patches to MIDI and vice versa.
 
+WARNING: Be sure to take a backup of your TB-3 patches before you use TB3Util. The codebase is still very much in development and may have bugs which could result in patches getting messed up.
+
 Currently this project is just a command line utility. If command line scares you, check back a bit later.
 I plan on making mananaging this process much more streamlined and potentially with a GUI.
 
