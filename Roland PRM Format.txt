@@ -1,0 +1,39 @@
+TB-3 .PRM Format
+
+--Filename--
+TB3_PTN$X.PRM
+$X = (Subbank_Number-1 * 8) + $X. Should have 1 - 64 in a full restore.
+
+--Params--
+
+Parameter: TRIPLET($X)
+Description: ???
+Default is TRIPLET(0);
+
+Parameter: LAST_STEP($X);
+Description: When the sequencer hits this step, loop.
+Example: LAST_STEP(15); would be a 16 step pattern.
+$X = Number_Steps - 1 (0 Based Index)
+
+
+Parameter: GATE_WIDTH($X);
+Description: ???
+Default is GATE_WIDTH(67);
+
+--Step Section--
+STEP$X ($Note,$Accent,$Clear,$Slide);
+
+$X = Step Number, starting with 1
+$Note = Note Pitch - Number Between 0-64. A smaller range is accessible on the TB-3: 24-48 
+$Clear = Note clear - Either 0 (disabled) or 1 (enabled)
+$Slide = Note slide - Either 0 (disabled) or 1 (enabled)
+
+--More Params--
+
+Parameter: BANK($X);
+Description: Selects the patch bank. As of Firmware 1.1 there are user creatable banks that can be switched between. Default factory bank is 0. 
+Default is BANK(0);
+
+Parameter: PATCH($X);
+Description: ???
+Default is PATCH(-1);

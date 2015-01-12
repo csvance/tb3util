@@ -20,7 +20,5 @@ class MIDIImporter:
 			pattern_path = "%s/%s%s.%s" % (self.path,MIDIFile.PREFIX,pattern_no,MIDIFile.EXTENSION)
 			patterns.append(MIDIParser(pattern_path).parse())
 			
-			
-		
 		return TB3Bank(patterns)
 		
