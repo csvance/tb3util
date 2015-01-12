@@ -1,0 +1,3 @@
+class MIDIFile:
+	PREFIX = "TB3_PTN"
+	EXTENSION = "MIDI"

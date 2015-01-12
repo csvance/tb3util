@@ -1,0 +1,3 @@
+class PRMFile:
+	PREFIX = "TB3_PTN"
+	EXTENSION = "PRM"
