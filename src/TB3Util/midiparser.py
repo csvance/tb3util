@@ -15,27 +15,27 @@ class MIDIParser:
 		
 		#Pulses per quarter
 		ppq = pattern.resolution
-		
-        #4 TB-3 notes in a quarter
+
+		#4 TB-3 notes in a quarter
 		tb3_step_distance = ppq / 4
 
 		#Count how many notes are current playing, used to calculate sliding
 		noteon = 0
-		
-        #Flags
+
+		#Flags
 		slide = False
 		accent = False
 
-        #MIDI Tick time during which the last note event happened
+		#MIDI Tick time during which the last note event happened
 		last_note_on = 0
-        
-        #Midi event tick counter
+
+		#Midi event tick counter
 		current_time = 0
-		
-        #Build a list of TB3Step objects
+
+		#Build a list of TB3Step objects
 		steps = []
-        step_count = 0
-		
+		step_count = 0
+	
 		for event in track:
 		
 			current_time += event.tick
