@@ -3,16 +3,14 @@ import os
 from tb3bank import TB3Bank
 from midiparser import MIDIParser
 from midifile import MIDIFile
+from tb3importer import TB3Importer
 
-class MIDIImporter:
-
-	def __init__(self,import_path):
-		self.path = import_path
+class MIDIImporter(TB3Importer):
 	
 	def import_bank(self):
 		if(not os.path.exists(self.path)):
 			print "Invalid import path: %s" % self.path
-			return
+			return None
 			
 		patterns = []
 			

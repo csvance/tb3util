@@ -3,16 +3,14 @@ import os
 from tb3bank import TB3Bank
 from prmparser import PRMParser
 from prmfile import PRMFile
+from tb3importer import TB3Importer
 
-class PRMImporter:
-
-	def __init__(self,import_path):
-		self.path = import_path
+class PRMImporter(TB3Importer):
 	
 	def import_bank(self):
 		if(not os.path.exists(self.path)):
 			print "Invalid import path: %s" % self.path
-			return
+			return None
 			
 		patterns = []
 			

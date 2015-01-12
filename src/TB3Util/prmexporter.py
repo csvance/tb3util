@@ -3,11 +3,10 @@ import os
 from tb3bank import TB3Bank
 from prmbuilder import PRMBuilder
 from prmfile import PRMFile
+from tb3exporter import TB3Exporter
 
-class PRMExporter:
-	def __init__(self,export_path):
-		self.path = export_path
-		
+class PRMExporter(TB3Exporter):
+	
 	def export_bank(self,bank):
 	
 		if(not os.path.isdir(self.path)):

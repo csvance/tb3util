@@ -2,13 +2,11 @@ import midi
 
 from midibuilder import MIDIBuilder
 from midifile import MIDIFile
+from tb3exporter import TB3Exporter
 
-class MIDIExporter:
-	def __init__(self,export_path):
-		self.path = export_path
-		
+class MIDIExporter(TB3Exporter):
+
 	def export_bank(self,bank):
-	
 		pattern_no = 1
 		for pattern in bank.get_patterns():
 			
